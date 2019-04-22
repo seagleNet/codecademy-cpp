@@ -1,0 +1,1 @@
+bool it_question();
