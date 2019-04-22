@@ -1,8 +1,6 @@
 #include <iostream>
 
-int main()
-{
-
+int main() {
   int guess;
 
   int tries = 0;
@@ -12,16 +10,14 @@ int main()
   std::cin >> guess;
 
   // Write a while loop here:
-  while (guess != 8 && tries < 50)
-  {
+  while (guess != 8 && tries < 50) {
     std::cout << "Wrong guess, try again: ";
     std::cin >> guess;
 
     tries++;
   }
 
-  if (guess == 8)
-  {
+  if (guess == 8) {
     std::cout << "You got it!\n";
   }
 }
