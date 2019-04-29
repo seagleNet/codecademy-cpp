@@ -23,15 +23,18 @@ int main() {
     display_misses(misses);
     display_status(incorrect, answer);
 
+    // Ask for user input
     std::cout << "Please enter your guess: ";
     std::cin >> letter;
 
+    // Check user input and update answer
     for (size_t i = 0; i < codeword.size(); i++) {
       if (letter == codeword[i]) {
         guess = true;
         answer[i] = letter;
       }
     }
+    // Check guess and output result feedback
     if (guess) {
       std::cout << "Correct!\n";
     } else {
