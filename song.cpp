@@ -1,18 +1,19 @@
 #include "song.hpp"
 #include <iostream>
+using namespace std;
 
-Song::Song(std::string new_title, std::string new_artist)
+Song::Song(string new_title, string new_artist)
     : title(new_title), artist(new_artist) {
 }
 
 Song::~Song() {
-  std::cout << "Goodbye " << title << "!\n";
+  cout << "Goodbye " << title << "!\n";
 }
 
-std::string Song::get_title() {
+string Song::get_title() {
   return title;
 }
 
-std::string Song::get_artist() {
+string Song::get_artist() {
   return artist;
 }
