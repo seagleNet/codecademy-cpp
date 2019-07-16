@@ -21,16 +21,13 @@ string Profile::view_profile() {
   profile_info += "\nPronouns: " + pronouns;
   profile_info += "\nCity: " + city;
   profile_info += "\nCountry: " + country;
-  profile_info += "\nHobbies: ";
-  for (size_t i = 0; i < hobbies.size(); i++) {
-    if (i == 0) {
-      profile_info += hobbies[i];
-    } else {
-      profile_info += ", " + hobbies[i];
-    }
+  string hobby_string = "Hobbies:\n";
+
+  for (string hobby : hobbies) {
+    hobby_string += " - " + hobby + "\n";
   }
 
-  return profile_info;
+  return profile_info + "\n" + hobby_string;
 }
 
 void Profile::add_hobby(string new_hobby) {
